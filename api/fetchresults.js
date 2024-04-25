@@ -47,7 +47,7 @@ const analyzeCaptions = async (text) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `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`,
           "Content-Type": "application/json",
         },
       }
