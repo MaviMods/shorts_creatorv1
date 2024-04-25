@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 app.post("/process_video", async (req, res) => {
   const videoId = req.body.url;
   try {
-    const transcripts = await youtube.getVideoDetails(videoId);
+    const transcripts = await youtube.getVideoCaptions(videoId);
     console.log("transcript fetched");
     const shorts = await fetchResults.extractShorts(transcripts.transcript);
     console.log('\n\n Shorts are :', shorts);
