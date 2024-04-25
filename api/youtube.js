@@ -8,7 +8,7 @@ exports.getVideoCaptions = async (Id) => {
     url: "https://youtube-scraper-2023.p.rapidapi.com/video_transcript",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": API_KEY,
+      "X-RapidAPI-Key": "f00ed8b8b2msh048127acd78e052p1c7385jsnc137561c9880",
       "X-RapidAPI-Host": "youtube-scraper-2023.p.rapidapi.com",
     },
     data: {
