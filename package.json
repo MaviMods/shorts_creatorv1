@@ -1,0 +1,22 @@
+{
+  "name": "youtube-shorts-creator",
+  "version": "1.0.0",
+  "description": "YouTube Shorts Creator is a web application that extracts specific segments from YouTube videos and creates short video clips, or \"shorts.\" Users can submit a YouTube video URL, and the application will download, process, and display the created shorts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/app.js",
+    "dev": "nodemon api/app.js",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2"
+  }
+}
