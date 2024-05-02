@@ -80,7 +80,12 @@ const analyzeCaptions = async (text) => {
   }
 };
 
-const divideCaptionsIntoChunks = (captions) => {
+const divideCaptionsIntoChunks = captions,
+  minDuration,
+  targetDuration,
+  maxDuration,
+) {
+  let currentTime = 0;
   let chunks = [];
   let currentChunk = [];
   let currentCharCount = 0;
@@ -89,6 +94,15 @@ const divideCaptionsIntoChunks = (captions) => {
     // Check if snippet is null and handle it appropriately
     let snippetCharCount = caption.snippet ? caption.snippet.length : 0;
 
+    const nextTime = currentTime + caption.duration;
+    if (
+      (nextTime >= targetDuration && nextTime - currentTime >= minDuration) ||
+      nextTime > maxDuration
+    ) {
+      chunks.push(currentChunk);
+      currentChunk = [caption];
+      currentTime = caption.duration;
+      
     if (currentCharCount + snippetCharCount > TOKEN_LIMIT) {
       chunks.push(currentChunk);
       currentChunk = [caption];
