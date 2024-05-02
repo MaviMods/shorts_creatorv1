@@ -48,7 +48,7 @@ const analyzeCaptions = async (text) => {
       {
         headers: {
           Authorization: "bearer sk-proj-KQ3haXxOc6T4zFtkapeZT3BlbkFJoR8V4vGtmOnXGnTVX7eh",
-          "Content-Type":" application/json",
+          "Content-Type": "json",
         },
       }
     );
