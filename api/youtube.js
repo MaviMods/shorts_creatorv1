@@ -1,15 +1,15 @@
-const axios = require("axios");
+ const axios = require("axios");
 
 exports.getVideoCaptions = async (Id) => {
-  const API_KEY = process.env.Rapid_API_KEY;
+  const API_KEY = "f00ed8b8b2msh048127acd78e052p1c7385jsnc137561c9880";
 
   const options = {
-    method: "POST",
-    url: "https://youtube-scraper-2023.p.rapidapi.com/video_transcript",
+    method: "GET",
+    url: "https://youtube-captions-and-transcripts.p.rapidapi.com/getCaptions",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "0b98bd680cmsh070d5edf0a4c7cdp18d125jsnbc7bbf98161d",
-      "X-RapidAPI-Host": "youtube-scraper-2023.p.rapidapi.com",
+      "X-RapidAPI-Key": "f00ed8b8b2msh048127acd78e052p1c7385jsnc137561c9880",
+      "X-RapidAPI-Host": "youtube-captions-and-transcripts.p.rapidapi.com",
     },
     data: {
       videoId: Id,
