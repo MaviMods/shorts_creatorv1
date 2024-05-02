@@ -80,11 +80,7 @@ const analyzeCaptions = async (text) => {
   }
 };
 
-const divideCaptionsIntoChunks = (captions,
-  minDuration,
-  targetDuration,
-  maxDuration
-) {
+const divideCaptionsIntoChunks = (captions) => {
   let currentTime = 0;
   let chunks = [];
   let currentChunk = [];
