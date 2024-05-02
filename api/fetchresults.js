@@ -47,7 +47,7 @@ const analyzeCaptions = async (text) => {
       },
       {
         headers: {
-          Authorization: "bearer sk-proj-KQ3haXxOc6T4zFtkapeZT3BlbkFJoR8V4vGtmOnXGnTVX7eh",
+          Authorization: "bearer sk-proj-ESXYFS1buf8JAyaXRStYT3BlbkFJywokXb2QG5LZ5WyyEjzy",
           "Content-Type": "json",
         },
       }
