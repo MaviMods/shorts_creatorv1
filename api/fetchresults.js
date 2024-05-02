@@ -6,7 +6,7 @@ exports.extractShorts = async (captions) => {
   let allShorts = []; // Array to hold all shorts from all chunks
   console.log(chunks.length);
   for (const chunk of chunks) {
-    const shortsFromChunk = await analyzeCaptions(chunk);
+    const shortsFromChunk = await analyzeCaptions(JSON.stringify(chunk));
     // Combine the shorts from this chunk into the main array
     allShorts = allShorts.concat(shortsFromChunk);
   }
